@@ -1,0 +1,7 @@
+SOLID Principle ada 5 :
+
+SRP -> Single Responsibility Principle
+OCP -> Open Close Principle 
+LSP -> Liskov Substitution Principle
+ISP -> Interface Segregation Principle
+DIP -> Dependency Invesion Principle
