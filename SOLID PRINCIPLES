@@ -8,6 +8,7 @@ DIP -> Dependency Invesion Principle
 
 
 Bagian 1 : Single Responsibility Principle
+Slogan : "A class should have one, and only one, reason to change."
 -Sebuah class harus mempunyai satu tanggungjawab. Jika sebuah class memiliki banyak tanggungjawab maka setiap ada perubahan
 semakin banyak yang harus di ubah, malah akan mempersulit implementasi dari yang diubah tsb.
 -Sebuah class jika terdapat potensial tanggungjawab baru maka harus di pecah.
