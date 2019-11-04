@@ -5,3 +5,15 @@ OCP -> Open Close Principle
 LSP -> Liskov Substitution Principle
 ISP -> Interface Segregation Principle
 DIP -> Dependency Invesion Principle
+
+
+Bagian 1 : Single Responsibility Principle
+-Sebuah class harus mempunyai satu tanggungjawab. Jika sebuah class memiliki banyak tanggungjawab maka setiap ada perubahan
+semakin banyak yang harus di ubah, malah akan mempersulit implementasi dari yang diubah tsb.
+-Sebuah class jika terdapat potensial tanggungjawab baru maka harus di pecah.
+
+
+Bagian 2 : Open Close Principle
+Slogan : "You should be able to extend a class without modifying it".
+Why : "This principle is the foundation for building code that is maintainable and reusable."
+
