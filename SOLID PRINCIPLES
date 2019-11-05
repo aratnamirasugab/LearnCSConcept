@@ -18,3 +18,6 @@ Bagian 2 : Open Close Principle
 Slogan : "You should be able to extend a class without modifying it".
 Why : "This principle is the foundation for building code that is maintainable and reusable."
 
+Bagian 3 : Liskov Substitution Principle
+Slogan : 
+
