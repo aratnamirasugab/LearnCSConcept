@@ -10,11 +10,23 @@ Bagian 1 : Single Responsibility Principle
 Slogan : "A class should have one, and only one, reason to change."
 -Sebuah class harus mempunyai satu tanggungjawab. Jika sebuah class memiliki banyak tanggungjawab maka setiap ada perubahan
 semakin banyak yang harus di ubah, malah akan mempersulit implementasi dari yang diubah tsb.
--Sebuah class jika terdapat potensial tanggungjawab baru maka harus di pecah.
+-Sebuah class jika terdapat potensial tanggungjawab baru maka harus di pecah tanggungjawab nya.
 
 Bagian 2 : Open Close Principle
 Slogan : "You should be able to extend a class without modifying it".
 Why : "This principle is the foundation for building code that is maintainable and reusable."
+Key Takeaways : 
+-> The class should be open for extension : 
+Ini untuk supaya sebuah class itu bisa di inherit, karena permintaan baru bermunculan jadi sebuah class yang lama harus bisa di inherit,
+menyesuaikan dengan requirement yang baru.
+
+-> The class should be closed for modification :
+Class tidak boleh di modifikasi karena class bisa jadi sudah di inherit banyak subclass.
+
+Gimana caranya buat achieve OCP ? 
+=> Dengan cara abstraction. jadi misalnya jika ada class bernama lingkaran/persegi, maka supaya class nya itu memenuhi faedah,
+Open Close Principle maka harus dibuat class yang umum, misalnya class/interface "bentuk" dimana attribut nya itu secara umum bisa di extend,
+kepada subclass lingkaran/persegi.
 
 Bagian 3 : Liskov Substitution Principle
 Slogan : 
