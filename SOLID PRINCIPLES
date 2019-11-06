@@ -19,9 +19,9 @@ Key Takeaways :
 -> The class should be open for extension : 
 Ini untuk supaya sebuah class itu bisa di inherit, karena permintaan baru bermunculan jadi sebuah class yang lama harus bisa di inherit,
 menyesuaikan dengan requirement yang baru.
-
 -> The class should be closed for modification :
 Class tidak boleh di modifikasi karena class bisa jadi sudah di inherit banyak subclass.
+-> Kita pengennya methods dari base class jika diturunkan kedalam banyak class memiliki behaviour yang sama.
 
 Gimana caranya buat achieve OCP ? 
 => Dengan cara abstraction. jadi misalnya jika ada class bernama lingkaran/persegi, maka supaya class nya itu memenuhi faedah,
@@ -29,7 +29,18 @@ Open Close Principle maka harus dibuat class yang umum, misalnya class/interface
 kepada subclass lingkaran/persegi.
 
 Bagian 3 : Liskov Substitution Principle
-Slogan : 
+Slogan : "Class turunan harus bisa diubah jika dijadikan sebagai base class?"
+Penjelasan : Misalnya ada base class rectangle dimana terdapat pula sebuah subclass square, dua2 nya memiliki methods yang sama,
+yaitu setWidth, setHeight. Yang jadi masalah adalah ketika diimplement, kedua class dipastikan memiliki behaviour yang sama tapi secara methods,
+mereka sama. Untuk mengatasi masalah ini, Uncle Bob berkata kita harus memiliki preconditions dan postconditions untuk setiap class diatas.
+
+Solutions nya adalah :
+1. Assume your baseclass works with a member int. Now your subtype requires that int to be positive. 
+This is strengthened pre-conditions, and now any code that worked perfectly fine before with negative ints is broken.
+2. Likewise, assume the same scenario, but the base class used to guarantee that the member would be positive after being called. 
+Then the subtype changes the behavior to allow negative ints. 
+Code that works on the object (and assumes that the post-condition is a positive int) is now broken since the post-condition is not upheld.
+// masih belum ngerti bagian Liskov Substitution Principle.
 
 Bagian 4 : Interface Segregation Principle
 
