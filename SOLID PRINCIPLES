@@ -1,5 +1,8 @@
 SOLID Principle ada 5 :
 
+"Following the SOLID Principles gives us many benefits, they make our system reusable, maintainable, scalable, testable and more."
+Read more => http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod
+
 SRP -> Single Responsibility Principle
 OCP -> Open Close Principle 
 LSP -> Liskov Substitution Principle
@@ -43,6 +46,22 @@ Code that works on the object (and assumes that the post-condition is a positive
 // masih belum ngerti bagian Liskov Substitution Principle.
 
 Bagian 4 : Interface Segregation Principle
+Slogan : "Make fine grained interfaces that are client specific. Clients should not be forced to implement interfaces they do not use."
+Penjelasan : Lebih baik bikin interface yang banyak tapi rinci dan tertarget daripada satu interface besar tapi class yang pakai interface tsb,
+malah menggunakan sedikit dari menthods pada interface yang besar itu.
+-> Dengan kita memilih untuk membuat interface kecil2 secara tertarget berarti lebih baik menggunakan composition daripada inheritance,
+dan Decoupling over Coupling.
+-> Microservices banyak menggunkana konsep ini, karena setiap services memiliki responsibilitynya masing2.
 
 Bagian 5 : Dependency Inversion Principle
+Slogan : "Depend on abstractions, not on concretions.
+A. High level modules should not depend upon low level modules. Both should depend upon abstractions.
+B. Abstractions should not depend upon details. Details should depend upon abstractions."
+
+Penjelasan : 
+->Pada principle DIP, diminta bahwa jika kita mempunyai module katakanlah sebuah modul untuk authentikasi, maka kita biasanya,
+membuat class untuk setiap service, misalnya GoogleAuthServices, GithubAuthService dll. cara diatas itu gak bagus, karena violasi OCP dimana,
+setiap class itu turunan dari class authentication namun akhirnya di modifikasi methods2 nya sesuai dengan kebutuhan subclass(Google, github dll) terus dia cara ini juga menimbulkan technical debt, kalau misalnya service baru ingin di masukkan maka akan mengubah codenya dimana violasi OCP akan terjadi.
+->Cara yang paling baik adalah dengan membuat abstract class "Authentication" / Interface trus diimplement ke setiap service. trus menggunakan Dependency Injection.
+->By depending on higher-level abstractions, we can easily change one instance with another instance in order to change the behavior. Dependency Inversion increases the reusability and flexibility of our code.
 
