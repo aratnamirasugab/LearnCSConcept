@@ -1,3 +1,7 @@
+Design pattern adalah sebuah design yang diperuntukkan supaya code yang kita buat terhindar dari kesalahan pada mendesign.
+Design Pattern menjelaskan masalahnya, solusinya, kapan kita perlu implementasi pattern tsb dan konsekuensi dari pattern tsb.
+By using the design patterns you can make your code more flexible, reusable and maintainable.
+
 There are several design pattern :
 
 Abstract Factory
