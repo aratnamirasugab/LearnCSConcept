@@ -2,6 +2,23 @@ Design pattern adalah sebuah design yang diperuntukkan supaya code yang kita bua
 Design Pattern menjelaskan masalahnya, solusinya, kapan kita perlu implementasi pattern tsb dan konsekuensi dari pattern tsb.
 By using the design patterns you can make your code more flexible, reusable and maintainable.
 
+Ada beberapa tipe design pattern yaitu :
+a. Creational
+Pada creational design pattern, lebih ditekankan pada pembuatan instansiasi class atau pembutan object.
+Biasanya kalau class, cara menginstansiasi itu dengan inheritance sedangkan pada object dengan delegasi
+Creational design patterns are : the Factory Method, Abstract Factory, Builder, Singleton, Object Pool, and Prototype.
+
+b. Structural
+Pada structural design pattern, inti dari pattern ini adalah bagaimana caranya menggabungkan class dan objek yang berbeda menjadi struktur
+yang lebih besar dan mencetuskan fitur yang baru.
+Structural design patterns are : Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Private Class Data, and Proxy.
+
+c. Behavioral
+Pada behavioral design pattern, intinya komunikasi class antar objek, jenis ini lebih concern kepada komunikasi antar objek.
+Behavioral patterns are : Chain of responsibility, Command, Interpreter, Iterator, Mediator, Memento, Null Object, Observer,
+State, Strategy, Template method, Visitor
+
+
 There are several design pattern :
 
 Abstract Factory
@@ -12,3 +29,6 @@ Decorator
 Observer
 Strategy
 Builder
+
+1. Abstract Factory :
+

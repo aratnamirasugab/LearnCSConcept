@@ -45,6 +45,22 @@ Then the subtype changes the behavior to allow negative ints.
 Code that works on the object (and assumes that the post-condition is a positive int) is now broken since the post-condition is not upheld.
 // masih belum ngerti bagian Liskov Substitution Principle.
 
+//another Liskov Substituion Principle Concept Explanation : 
+Moral of the story: model your classes based on behaviours not on properties; 
+model your data based on properties and not on behaviours. 
+If it behaves like a duck, it's certainly a bird.
+
+Well, a square clearly IS a type of rectangle in the real world. Whether we can model this in our code depends on the spec. 
+What the LSP indicates is that subtype behavior should match base type behavior as defined in the base type specification. 
+If the rectangle base type spec says that height and width can be set independently, 
+then LSP says that square cannot be a subtype of rectangle. If the rectangle spec says that a rectangle is immutable, 
+then a square can be a subtype of rectangle. It's all about subtypes maintaining the behavior specified for the base type.
+
+The real issue here is that we are not modeling rectangles, but rather "reshapable rectangles," i.e., 
+rectangles whose width or height can be modified after creation (and we still consider it to be the same object). 
+If we look at the rectangle class in this way, it is clear that a square is not a "reshapable rectangle", 
+because a square cannot be reshaped and still be a square (in general).
+
 Bagian 4 : Interface Segregation Principle
 Slogan : "Make fine grained interfaces that are client specific. Clients should not be forced to implement interfaces they do not use."
 Penjelasan : Lebih baik bikin interface yang banyak tapi rinci dan tertarget daripada satu interface besar tapi class yang pakai interface tsb,
