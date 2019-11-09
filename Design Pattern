@@ -30,5 +30,14 @@ Observer
 Strategy
 Builder
 
-1. Abstract Factory :
+1. Strategy :
+Menekankan pada prinsip bahwa sebuah class bisa mengimplement beberapa interface untuk nantinya di aplikasikan kepada client.
+Contoh : bubbleSort dan quickSort, dalam file kecil client implement bubbleSort namun pada saat file besar, quickSort lebih bermanfaat.
+
+Di UML :
+Class client akan meng-implement satu atau lebih interface, trus si interface juga bisa di extends oleh beberapa interface.
+
+"A Strategy defines a set of algorithms that can be used interchangeably."
+"In computer programming, the strategy pattern (also known as the policy pattern) is a behavioural software design pattern that enables 
+an algorithm's behavior to be selected at runtime."
 
