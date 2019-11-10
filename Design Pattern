@@ -80,23 +80,6 @@ bedanya adalah pada SimpleCoffee kita getCost return 10, tetapi pada MilkyCoffee
 serta ChocoCoffee yang dimana getCost-nya mereturn 10+ apa gitu angka.
 Jadi initinya pada decorator, kita bisa menspesifikasikan custom attribute yang ingin kita masukkan.
 
-pada code : 
-$someCoffee = new SimpleCoffee();
-echo $someCoffee->getCost(); // 10
-echo $someCoffee->getDescription(); // Simple Coffee
-
-$someCoffee = new MilkCoffee($someCoffee);
-echo $someCoffee->getCost(); // 12
-echo $someCoffee->getDescription(); // Simple Coffee, milk
-
-$someCoffee = new WhipCoffee($someCoffee);
-echo $someCoffee->getCost(); // 17
-echo $someCoffee->getDescription(); // Simple Coffee, milk, whip
-
-$someCoffee = new VanillaCoffee($someCoffee);
-echo $someCoffee->getCost(); // 20
-echo $someCoffee->getDescription(); // Simple Coffee, milk, whip, vanilla
-
 
 4. Factory Methods : => Hiring manager trus setiap tahap pada interview itu di assign ke beda2 role interviewer.
 
@@ -113,6 +96,7 @@ creating objects without having to specify the exact class of the object that wi
 a factory method—either specified in an interface and implemented by child classes, or implemented in a base class and optionally overridden 
 by derived classes—rather than by calling a constructor. 
 
+
 5. Abstract Factory Methods : 
 
 Real world example :
@@ -127,3 +111,43 @@ A factory of factories; a factory that groups the individual but related/depende
 Wikipedia says :
 The abstract factory pattern provides a way to encapsulate a group of individual factories that have a common theme without specifying their 
 concrete classes
+
+
+6. Singleton : => 
+
+Real world example : 
+There can only be one president of a country at a time. The same president has to be brought to action, whenever duty calls. 
+President here is singleton.
+
+In plain words : 
+Ensures that only one object of a particular class is ever created.
+
+Wikipedia says : 
+In software engineering, the singleton pattern is a software design pattern that restricts the instantiation of a class to one object. This is
+useful when exactly one object is needed to coordinate actions across the system.
+
+Singleton pattern is actually considered an anti-pattern and overuse of it should be avoided. It is not necessarily bad and could have some 
+valid use-cases but should be used with caution because it introduces a global state in your application and change to it in one place could 
+affect in the other areas and it could become pretty difficult to debug. The other bad thing about them is it makes your code tightly coupled 
+plus mocking the singleton could be difficult.
+
+
+for UTS : 
+Factory Method, Adapter, Prototype
+
+7. Adapter : => interface yang di implement oleh sebuah class bisa di pakai oleh interface lain. Gunanya untuk ngebuat class2 work tanpa
+ngubah source codenya.
+
+Real world example :
+Consider that you have some pictures in your memory card and you need to transfer them to your computer. In order to transfer them you need some
+kind of adapter that is compatible with your computer ports so that you can attach memory card to your computer. In this case card reader is an
+adapter. Another example would be the famous power adapter; a three legged plug can't be connected to a two pronged outlet, it needs to use a
+power adapter that makes it compatible with wthe two pronged outlet. Yet another example could be a translator translating words spoken by one
+person to another
+
+In plain words :
+Adapter pattern lets you wrap an otherwise incompatible object in an adapter to make it compatible with another class.
+
+Wikipedia says :
+In software engineering, the adapter pattern is a software design pattern that allows the interface of an existing class to be used as another
+interface. It is often used to make existing classes work with others without modifying their source code.
