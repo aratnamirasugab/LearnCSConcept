@@ -57,9 +57,9 @@ The observer pattern is a software design pattern in which an object, called the
 called observers, and notifies them automatically of any state changes, usually by calling one of their methods.
 
 
-3. Decorator : 
+3. Decorator : => Nambahin responsibility atau pretelan baru secara dinamik
 
-Real world example : 
+Real world example : 	
 Imagine you run a car service shop offering multiple services. Now how do you calculate the bill to be charged? 
 You pick one service and dynamically keep adding to it the prices for the provided services till you get the final cost. 
 Here each type of service is a decorator.
@@ -96,3 +96,34 @@ echo $someCoffee->getDescription(); // Simple Coffee, milk, whip
 $someCoffee = new VanillaCoffee($someCoffee);
 echo $someCoffee->getCost(); // 20
 echo $someCoffee->getDescription(); // Simple Coffee, milk, whip, vanilla
+
+
+4. Factory Methods : => Hiring manager trus setiap tahap pada interview itu di assign ke beda2 role interviewer.
+
+Real world example
+Consider the case of a hiring manager. It is impossible for one person to interview for each of the positions. Based on the job opening, 
+she has to decide and delegate the interview steps to different people.
+
+In plain words
+It provides a way to delegate the instantiation logic to child classes.
+
+Wikipedia says
+In class-based programming, the factory method pattern is a creational pattern that uses factory methods to deal with the problem of 
+creating objects without having to specify the exact class of the object that will be created. This is done by creating objects by calling 
+a factory method—either specified in an interface and implemented by child classes, or implemented in a base class and optionally overridden 
+by derived classes—rather than by calling a constructor. 
+
+5. Abstract Factory Methods : 
+
+Real world example :
+Extending our door example from Simple Factory. Based on your needs you might get a wooden door from a wooden door shop, iron door from an 
+iron shop or a PVC door from the relevant shop. Plus you might need a guy with different kind of specialities to fit the door, for example 
+a carpenter for wooden door, welder for iron door etc. As you can see there is a dependency between the doors now, wooden door needs carpenter,
+iron door needs a welder etc.
+
+In plain words :
+A factory of factories; a factory that groups the individual but related/dependent factories together without specifying their concrete classes.
+
+Wikipedia says :
+The abstract factory pattern provides a way to encapsulate a group of individual factories that have a common theme without specifying their 
+concrete classes
