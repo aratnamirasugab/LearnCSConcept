@@ -20,7 +20,6 @@ State, Strategy, Template method, Visitor
 
 
 There are several design pattern :
-
 Abstract Factory
 Prototype
 Adapter
@@ -29,6 +28,7 @@ Decorator
 Observer
 Strategy
 Builder
+
 
 1. Strategy :
 Menekankan pada prinsip bahwa sebuah class bisa mengimplement beberapa interface untuk nantinya di aplikasikan kepada client.
@@ -71,3 +71,28 @@ Wikipedia says :
 In object-oriented programming, the decorator pattern is a design pattern that allows behavior to be added to an individual object, 
 either statically or dynamically, without affecting the behavior of other objects from the same class. The decorator pattern is often useful 
 for adhering to the Single Responsibility Principle, as it allows functionality to be divided between classes with unique areas of concern.
+
+Misal : 
+buat interface coffee dengan method getCost() dan getDescription(), trus buat class SimpleCoffee yang meng-implement interface coffee, 
+lalu didalam class SimpleCoffee ada constructor, method getCost() return 10 dan getDescription() return simple coffee sebagai string,
+trus ada class lain, mis : MilkyCoffee, StrawberryCoffee, ChocoCoffee, nah masing2 class tsb memiliki constsructor, getCost(), getDescription(),
+bedanya adalah pada SimpleCoffee kita getCost return 10, tetapi pada MilkyCoffee kita tambahain return 10+2 misalnya. Dan StrawberryCoffee,
+serta ChocoCoffee yang dimana getCost-nya mereturn 10+ apa gitu angka.
+Jadi initinya pada decorator, kita bisa menspesifikasikan custom attribute yang ingin kita masukkan.
+
+pada code : 
+$someCoffee = new SimpleCoffee();
+echo $someCoffee->getCost(); // 10
+echo $someCoffee->getDescription(); // Simple Coffee
+
+$someCoffee = new MilkCoffee($someCoffee);
+echo $someCoffee->getCost(); // 12
+echo $someCoffee->getDescription(); // Simple Coffee, milk
+
+$someCoffee = new WhipCoffee($someCoffee);
+echo $someCoffee->getCost(); // 17
+echo $someCoffee->getDescription(); // Simple Coffee, milk, whip
+
+$someCoffee = new VanillaCoffee($someCoffee);
+echo $someCoffee->getCost(); // 20
+echo $someCoffee->getDescription(); // Simple Coffee, milk, whip, vanilla

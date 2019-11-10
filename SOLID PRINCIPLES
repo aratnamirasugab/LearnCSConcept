@@ -61,7 +61,7 @@ rectangles whose width or height can be modified after creation (and we still co
 If we look at the rectangle class in this way, it is clear that a square is not a "reshapable rectangle", 
 because a square cannot be reshaped and still be a square (in general).
 
-Bagian 4 : Interface Segregation Principle
+Bagian 4 : Interface Segregation Principle => Clients hanya mengimplement interface yang benar2 dipakai saja/dibutuhkan saja.
 Slogan : "Make fine grained interfaces that are client specific. Clients should not be forced to implement interfaces they do not use."
 Penjelasan : Lebih baik bikin interface yang banyak tapi rinci dan tertarget daripada satu interface besar tapi class yang pakai interface tsb,
 malah menggunakan sedikit dari menthods pada interface yang besar itu.
