@@ -19,17 +19,6 @@ Behavioral patterns are : Chain of responsibility, Command, Interpreter, Iterato
 State, Strategy, Template method, Visitor
 
 
-There are several design pattern :
-Abstract Factory
-Prototype
-Adapter
-Composite
-Decorator
-Observer
-Strategy
-Builder
-
-
 1. Strategy :
 Menekankan pada prinsip bahwa sebuah class bisa mengimplement beberapa interface untuk nantinya di aplikasikan kepada client.
 Contoh : bubbleSort dan quickSort, dalam file kecil client implement bubbleSort namun pada saat file besar, quickSort lebih bermanfaat.
@@ -136,7 +125,7 @@ for UTS :
 Factory Method, Adapter, Prototype
 
 7. Adapter : => interface yang di implement oleh sebuah class bisa di pakai oleh interface lain. Gunanya untuk ngebuat class2 work tanpa
-ngubah source codenya.
+ngubah source codenya dan gak perlu bikin code double.
 
 Real world example :
 Consider that you have some pictures in your memory card and you need to transfer them to your computer. In order to transfer them you need some
@@ -151,3 +140,24 @@ Adapter pattern lets you wrap an otherwise incompatible object in an adapter to 
 Wikipedia says :
 In software engineering, the adapter pattern is a software design pattern that allows the interface of an existing class to be used as another
 interface. It is often used to make existing classes work with others without modifying their source code.
+
+
+8. Prototype :
+
+Real world example :
+Remember dolly? The sheep that was cloned! Lets not get into the details but the key point here is that it is all about cloning
+
+In plain words :
+Create object based on an existing object through cloning.
+
+Wikipedia says : 
+The prototype pattern is a creational design pattern in software development. It is used when the type of objects to create is determined by a 
+prototypical instance, which is cloned to produce new objects.
+
+In short, it allows you to create a copy of an existing object and modify it to your needs, instead of going through the trouble of creating an
+object from scratch and setting it up.
+
+When to use?
+When an object is required that is similar to existing object or when the creation would be expensive as compared to cloning.
+
+The new Operator considered harmful.
