@@ -108,8 +108,8 @@ plus mocking the singleton could be difficult.
 for UTS : 
 Factory Method, Adapter, Prototype
 
-7. Adapter : => interface yang di implement oleh sebuah class bisa di pakai oleh interface lain. Gunanya untuk ngebuat class2 work tanpa
-ngubah source codenya dan gak perlu bikin code double.
+7. Adapter : => wrapper yang memperbolehkan interface yang ada di sebuah class bisa cross-work dengan interface lain, ini gunanya supaya
+class yang saling berbeda bisa bekerja(connect) tanpa memodifikasi source code mereka.
 
 Real world example :
 Consider that you have some pictures in your memory card and you need to transfer them to your computer. In order to transfer them you need some
