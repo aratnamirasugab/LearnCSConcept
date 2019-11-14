@@ -2,6 +2,10 @@ Design pattern adalah sebuah design yang diperuntukkan supaya code yang kita bua
 Design Pattern menjelaskan masalahnya, solusinya, kapan kita perlu implementasi pattern tsb dan konsekuensi dari pattern tsb.
 By using the design patterns you can make your code more flexible, reusable and maintainable.
 
+Selecting a Design Pattern :
+-> To avoid redesign
+-> Focus in what will vary in a design
+
 Ada beberapa tipe design pattern yaitu :
 a. Creational
 Pada creational design pattern, lebih ditekankan pada pembuatan instansiasi class atau pembutan object.
